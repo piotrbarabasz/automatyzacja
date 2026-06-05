@@ -1,0 +1,64 @@
+MVP 2 — Chatbot z prostym RAG
+
+Cel: pokazać klientowi, że chatbot może odpowiadać na podstawie dokumentów.
+
+Frontend
+
+wszystko z MVP 1
+osobne demo branżowe:
+biuro rachunkowe
+salon beauty
+kancelaria
+wybór demo z listy
+
+Backend
+Endpointy:
+
+POST /chat
+POST /contact
+GET /demo-contexts
+
+RAG
+
+Chroma albo Qdrant lokalnie
+embeddingi dokumentów
+osobne knowledge base dla każdego demo
+
+Przykład:
+
+knowledge_base/
+  accounting/
+    faq.md
+    services.md
+    sample_regulations.pdf
+
+  beauty/
+    faq.md
+    pricing.md
+    booking_rules.md
+
+  legal/
+    faq.md
+    services.md
+    terms.md
+
+Architektura:
+
+Angular Chat Widget
+        |
+        v
+FastAPI /chat
+        |
+        v
+Retriever
+        |
+        v
+Relevant chunks
+        |
+        v
+LLM
+        |
+        v
+Answer
+
+To już wygląda jak realny produkt.

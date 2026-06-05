@@ -1,0 +1,20 @@
+<section class="section section--white problem" aria-labelledby="problem-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Problem</p>
+      <h2 class="section-title" id="problem-title">Obsługa zapytań zaczyna zabierać zbyt dużo czasu</h2>
+      <p class="section-lead">
+        W małej firmie każda godzina właściciela i zespołu jest cenna. AI może przejąć
+        powtarzalną część komunikacji, zanim stanie się wąskim gardłem.
+      </p>
+    </div>
+
+    <div class="problem__grid">
+      <article class="problem__card card" *ngFor="let problem of problems; index as i">
+        <span class="problem__number">0{{ i + 1 }}</span>
+        <h3>{{ problem.title }}</h3>
+        <p>{{ problem.description }}</p>
+      </article>
+    </div>
+  </div>
+</section>

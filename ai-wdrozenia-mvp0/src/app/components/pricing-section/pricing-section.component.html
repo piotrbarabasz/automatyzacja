@@ -1,0 +1,31 @@
+<section class="section section--ink pricing" id="pricing" aria-labelledby="pricing-title">
+  <div class="container">
+    <div class="section__header pricing__header">
+      <p class="eyebrow">Pakiety</p>
+      <h2 class="section-title" id="pricing-title">Zakres dopasowany do pierwszego wdrożenia</h2>
+      <p class="section-lead">
+        MVP 0 skupia się na sprzedażowej stronie i jasnej ofercie. Kolejny krok to podpięcie
+        demonstracyjnego chatbota lub integracji mailowej.
+      </p>
+    </div>
+
+    <div class="pricing__grid">
+      <article class="pricing__card" [class.pricing__card--highlight]="plan.highlighted" *ngFor="let plan of packages">
+        <div>
+          <p class="pricing__tag" *ngIf="plan.highlighted">Najczęściej wybierany zakres</p>
+          <h3>{{ plan.name }}</h3>
+          <p class="pricing__price">{{ plan.price }}</p>
+          <p class="pricing__description">{{ plan.description }}</p>
+        </div>
+
+        <ul>
+          <li *ngFor="let feature of plan.features">{{ feature }}</li>
+        </ul>
+
+        <a class="btn" [class.btn--primary]="plan.highlighted" [class.btn--secondary]="!plan.highlighted" href="#contact">
+          Zapytaj o {{ plan.name }}
+        </a>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<section class="section process" aria-labelledby="process-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Proces</p>
+      <h2 class="section-title" id="process-title">Od rozmowy do uruchomienia w kilku krokach</h2>
+      <p class="section-lead">
+        Wdrożenie jest prowadzone etapami, żeby firma wiedziała, co zostanie zautomatyzowane
+        i jak będzie wyglądała obsługa klienta po starcie.
+      </p>
+    </div>
+
+    <ol class="process__steps">
+      <li class="process__step" *ngFor="let step of steps; index as i">
+        <span class="process__index">{{ i + 1 }}</span>
+        <div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>

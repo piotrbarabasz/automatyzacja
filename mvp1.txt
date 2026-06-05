@@ -1,0 +1,45 @@
+MVP 1 — Wizytówka + demo chatbota
+
+Cel: pokazać, że naprawdę umiesz wdrożyć AI.
+
+Frontend: Angular
+
+landing page
+sekcja pakietów
+sekcja „Zobacz demo”
+komponent chatbota
+formularz kontaktowy
+
+Backend: FastAPI
+Endpointy:
+
+POST /chat
+POST /contact
+
+LLM
+
+OpenAI / Azure OpenAI
+system prompt opisujący Twoją ofertę
+brak bazy wektorowej
+
+Wiedza chatbota
+
+plik offer.md
+informacje o usługach, cenach, procesie wdrożenia, FAQ
+
+Architektura:
+
+Angular
+  ├── Landing Page
+  ├── Pricing Section
+  ├── Chat Widget
+  └── Contact Form
+
+FastAPI
+  ├── /chat
+  └── /contact
+
+LLM API
+  └── odpowiedzi na podstawie promptu + offer.md
+
+To jest najlepszy pierwszy publiczny release.

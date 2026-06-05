@@ -1,0 +1,55 @@
+MVP 3 — Lead capture i automatyzacja sprzedaży
+
+Cel: żeby chatbot nie tylko odpowiadał, ale też zbierał potencjalnych klientów.
+
+Frontend
+
+chatbot pyta o:
+branżę
+problem
+mail/telefon
+preferowany kontakt
+formularz kontaktowy z walidacją
+CTA po rozmowie: „Wyślij podsumowanie”
+
+Backend
+Endpointy:
+
+POST /chat
+POST /lead
+POST /contact
+POST /conversation-summary
+
+Integracje
+
+Google Sheets / Airtable / Notion CRM
+wysyłka maila do Ciebie
+opcjonalnie Calendly / Google Calendar
+
+LLM
+
+generuje podsumowanie rozmowy:
+czego chce klient
+jaka branża
+jaki problem
+sugerowany pakiet
+poziom zainteresowania
+
+Architektura:
+
+Chatbot
+  ├── odpowiada na pytania
+  ├── kwalifikuje leada
+  └── zbiera dane kontaktowe
+
+FastAPI
+  ├── /chat
+  ├── /lead
+  └── /conversation-summary
+
+Integracje
+  ├── Google Sheets
+  ├── Email
+  └── Calendar/Calendly
+
+To jest dobra wersja do reklam i cold outreachu.

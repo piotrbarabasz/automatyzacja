@@ -1,0 +1,15 @@
+<section class="section section--white faq" aria-labelledby="faq-title">
+  <div class="container faq__layout">
+    <div class="section__header faq__header">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-title" id="faq-title">Najczęstsze pytania przed pierwszym wdrożeniem</h2>
+    </div>
+
+    <div class="faq__items">
+      <details class="faq__item" *ngFor="let item of faqs">
+        <summary>{{ item.question }}</summary>
+        <p>{{ item.answer }}</p>
+      </details>
+    </div>
+  </div>
+</section>

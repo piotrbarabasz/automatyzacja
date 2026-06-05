@@ -1,0 +1,50 @@
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+  <div class="container contact__layout">
+    <div class="contact__content">
+      <p class="eyebrow">Kontakt</p>
+      <h2 class="section-title" id="contact-title">Umów darmową konsultację</h2>
+      <p class="section-lead">
+        Napisz kilka zdań o firmie i typowych zapytaniach klientów. Formularz jest statyczny
+        w MVP 0 i gotowy do późniejszego podłączenia API.
+      </p>
+
+      <div class="contact__note">
+        <strong>Co warto przygotować?</strong>
+        <span>FAQ, opis oferty, przykładowe maile klientów i link do strony WWW.</span>
+      </div>
+    </div>
+
+    <form class="contact__form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="contact__field">
+        <label for="name">Imię</label>
+        <input id="name" type="text" formControlName="name" autocomplete="given-name" [class.is-invalid]="hasError('name')" />
+        <p class="contact__error" *ngIf="hasError('name', 'required')">Podaj imię.</p>
+        <p class="contact__error" *ngIf="hasError('name', 'minlength')">Imię powinno mieć co najmniej 2 znaki.</p>
+      </div>
+
+      <div class="contact__field">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" autocomplete="email" [class.is-invalid]="hasError('email')" />
+        <p class="contact__error" *ngIf="hasError('email', 'required')">Podaj adres email.</p>
+        <p class="contact__error" *ngIf="hasError('email', 'email')">Podaj poprawny adres email.</p>
+      </div>
+
+      <div class="contact__field">
+        <label for="company">Nazwa firmy</label>
+        <input id="company" type="text" formControlName="company" autocomplete="organization" [class.is-invalid]="hasError('company')" />
+        <p class="contact__error" *ngIf="hasError('company', 'required')">Podaj nazwę firmy.</p>
+        <p class="contact__error" *ngIf="hasError('company', 'minlength')">Nazwa firmy powinna mieć co najmniej 2 znaki.</p>
+      </div>
+
+      <div class="contact__field">
+        <label for="message">Wiadomość</label>
+        <textarea id="message" rows="5" formControlName="message" [class.is-invalid]="hasError('message')"></textarea>
+        <p class="contact__error" *ngIf="hasError('message', 'required')">Napisz krótką wiadomość.</p>
+        <p class="contact__error" *ngIf="hasError('message', 'minlength')">Wiadomość powinna mieć co najmniej 10 znaków.</p>
+      </div>
+
+      <button class="btn btn--dark" type="submit">Wyślij zapytanie</button>
+      <p class="contact__success" *ngIf="sent">Dziękuję. Wiadomość została przygotowana do wysłania.</p>
+    </form>
+  </div>
+</section>

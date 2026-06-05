@@ -1,0 +1,30 @@
+.target__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 42px;
+  align-items: center;
+}
+
+.target__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.target__pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: #f8fbff;
+  color: var(--slate-900);
+  font-weight: 800;
+  box-shadow: var(--shadow-card);
+}
+
+@media (max-width: 840px) {
+  .target__layout {
+    grid-template-columns: 1fr;
+  }
+}

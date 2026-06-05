@@ -1,0 +1,16 @@
+<section class="section section--white target" aria-labelledby="target-title">
+  <div class="container target__layout">
+    <div class="section__header">
+      <p class="eyebrow">Dla kogo?</p>
+      <h2 class="section-title" id="target-title">Dla firm, które odpowiadają na podobne pytania każdego dnia</h2>
+      <p class="section-lead">
+        Największy efekt pojawia się tam, gdzie klienci często pytają o zakres usług,
+        dostępność, cennik, dokumenty, terminy albo status zamówienia.
+      </p>
+    </div>
+
+    <div class="target__list" aria-label="Branże">
+      <span class="target__pill" *ngFor="let industry of industries">{{ industry }}</span>
+    </div>
+  </div>
+</section>

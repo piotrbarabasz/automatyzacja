@@ -1,0 +1,134 @@
+:host {
+  display: block;
+}
+
+.hero {
+  position: relative;
+  min-height: min(760px, calc(100svh - 64px));
+  padding: 110px 0 86px;
+  background: var(--navy-950);
+  color: var(--white);
+  isolation: isolate;
+}
+
+.hero__image,
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.hero__image {
+  background-image: url('/assets/hero-ai-automation.png');
+  background-position: center right;
+  background-size: cover;
+}
+
+.hero__overlay {
+  z-index: -1;
+  background: rgba(7, 17, 31, 0.72);
+}
+
+.hero__content {
+  max-width: 1120px;
+}
+
+h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(2.45rem, 6vw, 5rem);
+  line-height: 0.98;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.hero__lead {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(1.08rem, 2vw, 1.32rem);
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.hero__highlights {
+  display: grid;
+  max-width: 820px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 54px 0 0;
+  padding: 0;
+}
+
+.hero__highlight {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+
+  dt {
+    color: var(--white);
+    font-size: 1.35rem;
+    font-weight: 900;
+  }
+
+  dd {
+    margin: 5px 0 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.94rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: auto;
+    padding: 64px 0 42px;
+  }
+
+  .hero__image {
+    background-position: 62% center;
+  }
+
+  .hero__overlay {
+    background: rgba(7, 17, 31, 0.78);
+  }
+
+  .hero__actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .hero__actions .btn {
+    min-width: 0;
+    padding-right: 14px;
+    padding-left: 14px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .hero__highlights {
+    grid-template-columns: 1fr;
+    margin-top: 26px;
+  }
+
+  h1 {
+    max-width: 340px;
+    font-size: clamp(1.9rem, 9vw, 2.2rem);
+    line-height: 1.05;
+  }
+
+  .hero__lead {
+    max-width: 330px;
+    margin-top: 18px;
+    font-size: 0.98rem;
+  }
+}

@@ -1,0 +1,23 @@
+<section class="section solution" aria-labelledby="solution-title">
+  <div class="container solution__layout">
+    <div class="section__header solution__intro">
+      <p class="eyebrow">Rozwiązanie</p>
+      <h2 class="section-title" id="solution-title">Dwa proste wdrożenia, które porządkują kontakt z klientem</h2>
+      <p class="section-lead">
+        Zaczynamy od praktycznych automatyzacji, które da się szybko uruchomić i rozwijać
+        dopiero wtedy, gdy firma widzi realną wartość.
+      </p>
+    </div>
+
+    <div class="solution__cards">
+      <article class="solution__card card" *ngFor="let solution of solutions">
+        <div class="solution__mark" aria-hidden="true"></div>
+        <h3>{{ solution.title }}</h3>
+        <p>{{ solution.description }}</p>
+        <ul>
+          <li *ngFor="let feature of solution.features">{{ feature }}</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>

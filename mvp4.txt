@@ -1,0 +1,45 @@
+MVP 4 — Demo automatyzacji maili
+
+Cel: pokazać drugi pakiet, czyli automatyzację maili.
+
+Frontend
+
+sekcja „Wklej przykładowego maila”
+demo:
+użytkownik wpisuje wiadomość klienta
+AI klasyfikuje sprawę
+AI proponuje odpowiedź
+AI wskazuje ton odpowiedzi
+
+Backend
+Endpointy:
+
+POST /email/analyze
+POST /email/generate-response
+POST /email/summarize
+
+Funkcje
+
+klasyfikacja wiadomości:
+zapytanie ofertowe
+reklamacja
+prośba o termin
+pytanie o cenę
+generowanie odpowiedzi
+streszczenie maila
+propozycja kolejnego kroku
+
+Architektura:
+
+Email Demo UI
+        |
+        v
+FastAPI
+  ├── /email/analyze
+  ├── /email/generate-response
+  └── /email/summarize
+        |
+        v
+LLM API
+
+To będzie bardzo mocny element sprzedażowy.

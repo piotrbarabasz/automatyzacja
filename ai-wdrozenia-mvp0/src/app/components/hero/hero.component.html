@@ -1,0 +1,25 @@
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero__image" aria-hidden="true"></div>
+  <div class="hero__overlay" aria-hidden="true"></div>
+
+  <div class="container hero__content">
+    <p class="eyebrow">Wdrożenia AI dla małych firm</p>
+    <h1 id="hero-title">AI chatbot i automatyzacja maili dla małych firm</h1>
+    <p class="hero__lead">
+      Pomagam małym firmom oszczędzać czas, automatyzując obsługę klientów,
+      maile i powtarzalne pytania.
+    </p>
+
+    <div class="hero__actions" aria-label="Główne akcje">
+      <a class="btn btn--primary" href="#contact">Umów darmową konsultację</a>
+      <a class="btn btn--secondary" href="#pricing">Zobacz pakiety</a>
+    </div>
+
+    <dl class="hero__highlights">
+      <div class="hero__highlight" *ngFor="let item of highlights">
+        <dt>{{ item.value }}</dt>
+        <dd>{{ item.label }}</dd>
+      </div>
+    </dl>
+  </div>
+</section>

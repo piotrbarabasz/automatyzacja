@@ -1,0 +1,20 @@
+MVP 0 — Prosta wizytówka sprzedażowa
+
+Cel: szybko mieć stronę i ofertę.
+
+Frontend: Angular
+
+landing page
+opis problemu
+opis usług
+pakiety: Start / Biznes
+formularz kontaktowy
+CTA: „Umów darmową konsultację”
+
+Backend: brak albo minimalny
+
+formularz przez Formspree / EmailJS / Google Forms
+
+Bez AI na tym etapie.
+
+To możesz potraktować jako wersję awaryjną, ale ja bym szybko przeszedł do MVP 1.
