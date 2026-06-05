@@ -1,0 +1,43 @@
+<article class="chatbot" aria-label="Demo chatbota AI">
+  <header class="chatbot__header">
+    <div>
+      <p>AI assistant</p>
+      <h3>Demo wdrożenia</h3>
+    </div>
+    <span class="chatbot__status">Online</span>
+  </header>
+
+  <div class="chatbot__messages" #messageList aria-live="polite">
+    <div class="chatbot__row" [class.chatbot__row--user]="message.role === 'user'" *ngFor="let message of messages">
+      <div class="chatbot__bubble" [class.chatbot__bubble--user]="message.role === 'user'">
+        {{ message.content }}
+      </div>
+    </div>
+
+    <div class="chatbot__row" *ngIf="isLoading">
+      <div class="chatbot__bubble chatbot__bubble--loading">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <p class="chatbot__error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <form class="chatbot__form" (ngSubmit)="sendMessage()">
+    <textarea
+      name="message"
+      rows="2"
+      [(ngModel)]="draft"
+      [attr.maxlength]="maxMessageLength"
+      [disabled]="isLoading"
+      (keydown.enter)="handleEnter($event)"
+      placeholder="Wpisz pytanie o ofertę..."
+      aria-label="Wiadomość do chatbota"
+    ></textarea>
+    <button class="btn btn--primary" type="submit" [disabled]="isLoading || !draft.trim()">
+      Wyślij
+    </button>
+  </form>
+</article>

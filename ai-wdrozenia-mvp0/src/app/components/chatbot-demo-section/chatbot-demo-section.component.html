@@ -1,0 +1,20 @@
+<section class="section chatbot-demo" id="chatbot-demo" aria-labelledby="chatbot-demo-title">
+  <div class="container chatbot-demo__layout">
+    <div class="chatbot-demo__content">
+      <p class="eyebrow">Demo MVP 1</p>
+      <h2 class="section-title" id="chatbot-demo-title">Zobacz demo chatbota AI</h2>
+      <p class="section-lead">
+        Zadaj pytanie tak, jakbyś był właścicielem małej firmy zainteresowanym
+        automatyzacją obsługi klienta.
+      </p>
+
+      <div class="chatbot-demo__questions" aria-label="Przykładowe pytania">
+        <button type="button" *ngFor="let question of sampleQuestions" (click)="chatbot.sendPresetQuestion(question)">
+          {{ question }}
+        </button>
+      </div>
+    </div>
+
+    <app-chatbot-widget #chatbot></app-chatbot-widget>
+  </div>
+</section>

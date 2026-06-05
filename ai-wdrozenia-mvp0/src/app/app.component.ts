@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChatbotDemoSectionComponent } from './components/chatbot-demo-section/chatbot-demo-section.component';
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 import { FaqSectionComponent } from './components/faq-section/faq-section.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -16,6 +17,7 @@ import { TargetSectionComponent } from './components/target-section/target-secti
     HeroComponent,
     ProblemSectionComponent,
     SolutionSectionComponent,
+    ChatbotDemoSectionComponent,
     PricingSectionComponent,
     TargetSectionComponent,
     ProcessSectionComponent,
